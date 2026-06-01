@@ -792,7 +792,10 @@ function renderBSankey(data) {
     .attr("x", (d) => d.x)
     .attr("y", 34)
     .attr("text-anchor", "middle")
-    .attr("fill", (d) => bStageColors[d.stage] || colors.ink)
+    .attr("font-size", 11)
+    .attr("font-weight", 900)
+    .attr("letter-spacing", "0.02em")
+    .attr("fill", "rgba(36, 32, 29, 0.82)")
     .text((d) => d.label);
 }
 
