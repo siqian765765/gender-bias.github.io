@@ -1967,5 +1967,8 @@ input {
   stroke-linejoin: round !important;
   paint-order: stroke !important;
 }
-
+.b-stage-label {
+  font-size: 13px !important;
+  font-weight: 800;
+}
 /* ================= END RESTORE HERO BACKGROUND IMAGE ================= */
