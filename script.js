@@ -315,7 +315,7 @@ function renderDumbbellChart() {
     .append("line")
     .attr("x1", (d) => x(d.femaleReviewers))
     .attr("x2", (d) => x(d.femaleAuthors))
-    .attr("stroke", "rgba(251,251,246,.32)")
+    .attr("stroke", "#000000")
     .attr("stroke-width", 5)
     .attr("stroke-linecap", "round");
 
