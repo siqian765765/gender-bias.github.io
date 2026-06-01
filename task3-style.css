@@ -1779,4 +1779,115 @@ input {
   position: relative;
   z-index: 10;
 }
+/* ===== Only fix black backgrounds for Desk rejection + Reviewer recommendation ===== */
+
+#desk-rejection.chart-card,
+#review-recommendation.chart-card {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.62), rgba(255, 248, 236, 0.86)),
+    rgba(255, 250, 241, 0.88) !important;
+  border-color: rgba(99, 82, 69, 0.16) !important;
+  box-shadow: 0 24px 68px rgba(112, 91, 76, 0.12) !important;
+}
+
+/* 两个图表的绘图区底色 */
+#desk-rejection-chart,
+#recommendation-chart {
+  background: rgba(255, 253, 247, 0.68) !important;
+  border-radius: 18px;
+}
+
+/* SVG 本身不要再露黑底 */
+#desk-rejection-chart svg,
+#recommendation-chart svg {
+  background: transparent !important;
+}
+
+/* Desk rejection 每一行原来的黑色底板 */
+#desk-rejection-chart .r-row-bg {
+  fill: rgba(255, 250, 241, 0.76) !important;
+  stroke: rgba(99, 82, 69, 0.16) !important;
+}
+
+/* Reviewer recommendation 如果有行底板，也一起去掉黑色 */
+#recommendation-chart .r-row-bg {
+  fill: rgba(255, 250, 241, 0.76) !important;
+  stroke: rgba(99, 82, 69, 0.16) !important;
+}
+
+/* 两个图表里的轴线 / 网格线改成浅色背景可见的颜色 */
+#desk-rejection-chart .axis path,
+#desk-rejection-chart .axis line,
+#recommendation-chart .axis path,
+#recommendation-chart .axis line {
+  stroke: rgba(99, 82, 69, 0.24) !important;
+}
+
+#desk-rejection-chart .grid line,
+#recommendation-chart .grid line {
+  stroke: rgba(99, 82, 69, 0.14) !important;
+}
+
+/* Desk rejection 里的文字从白色改深色 */
+#desk-rejection-chart .r-discipline-label,
+#desk-rejection-chart .r-rate-label,
+#desk-rejection-chart .r-group-meta,
+#desk-rejection-chart .r-axis-label,
+#desk-rejection-chart .r-legend-label,
+#desk-rejection-chart .axis text,
+#desk-rejection-chart .axis-title {
+  fill: rgba(36, 32, 29, 0.78) !important;
+  color: rgba(36, 32, 29, 0.78) !important;
+  text-shadow: none !important;
+}
+
+/* rate label 原来有深色描边，改成浅色描边 */
+#desk-rejection-chart .r-rate-label {
+  stroke: rgba(255, 253, 247, 0.92) !important;
+  stroke-width: 3px !important;
+  paint-order: stroke !important;
+}
+
+/* Reviewer recommendation 里的文字从白色改深色 */
+#recommendation-chart .rec-column-labels text,
+#recommendation-chart .rec-heat-value,
+#recommendation-chart .rec-heat-sub,
+#recommendation-chart .axis text,
+#recommendation-chart .axis-title {
+  fill: rgba(36, 32, 29, 0.78) !important;
+  color: rgba(36, 32, 29, 0.78) !important;
+  text-shadow: none !important;
+}
+
+/* heatmap 数值文字原来靠黑色描边增强对比，改成浅色描边 */
+#recommendation-chart .rec-heat-value {
+  stroke: rgba(255, 253, 247, 0.88) !important;
+  stroke-width: 4px !important;
+  paint-order: stroke !important;
+}
+
+/* 两个图表标题区域的线也改浅 */
+#desk-rejection .chart-head,
+#review-recommendation .chart-head {
+  border-bottom-color: rgba(99, 82, 69, 0.16) !important;
+}
+
+/* 小标签 / legend 不要黑底 */
+#desk-rejection #r-average-chip,
+#review-recommendation #rec-legend,
+#review-recommendation .rec-legend {
+  background: rgba(255, 250, 241, 0.76) !important;
+  border-color: rgba(99, 82, 69, 0.16) !important;
+  color: rgba(36, 32, 29, 0.72) !important;
+}
+
+/* Desk rejection 的平均线不要用黑色背景逻辑 */
+#desk-rejection-chart .r-avg-line {
+  stroke: #6f8fa3 !important;
+}
+
+#desk-rejection-chart .r-avg-label {
+  fill: #556f81 !important;
+}
+
 /* ================= END RESTORE HERO BACKGROUND IMAGE ================= */
