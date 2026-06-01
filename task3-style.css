@@ -1889,5 +1889,43 @@ input {
 #desk-rejection-chart .r-avg-label {
   fill: #556f81 !important;
 }
+/* ===== Fix text color only for Reviewer recommendation chart ===== */
+
+/* 左侧行标题：放在浅色行底板上，所以改深色 */
+#recommendation-chart .rec-lane > .r-discipline-label {
+  fill: #24201d !important;
+  stroke: none !important;
+  font-weight: 900;
+}
+
+#recommendation-chart .rec-lane > .r-group-meta {
+  fill: rgba(36, 32, 29, 0.56) !important;
+  stroke: none !important;
+  font-weight: 700;
+}
+
+/* 顶部列名：也是浅色背景，所以改深色 */
+#recommendation-chart .rec-column-labels text {
+  fill: rgba(36, 32, 29, 0.72) !important;
+  stroke: none !important;
+}
+
+/* 格子里的数值：保留浅色，因为热力图格子本身有深蓝/黑色 */
+#recommendation-chart .rec-cell .rec-heat-value {
+  fill: #fffaf1 !important;
+  stroke: rgba(20, 23, 29, 0.48) !important;
+  stroke-width: 4px !important;
+  stroke-linejoin: round !important;
+  paint-order: stroke !important;
+}
+
+/* 格子里的 n=xxx：也保留浅色，但稍微弱一点 */
+#recommendation-chart .rec-cell .rec-heat-sub {
+  fill: rgba(255, 250, 241, 0.78) !important;
+  stroke: rgba(20, 23, 29, 0.36) !important;
+  stroke-width: 2px !important;
+  stroke-linejoin: round !important;
+  paint-order: stroke !important;
+}
 
 /* ================= END RESTORE HERO BACKGROUND IMAGE ================= */
