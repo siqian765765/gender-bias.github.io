@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Peer Review and Gender Bias | Evidence from 145 Scholarly Journals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@500;700;900&family=Oswald:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="apple-refine.css" />
+    <link rel="stylesheet" href="project-refine.css" />
+    <link rel="stylesheet" href="task3-style.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark"></span>
+        <span>Peer Review Bias</span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="#overview">Dataset</a>
+        <a href="#method">Variables</a>
+        <a href="#fields">Gender Gap</a>
+        <a href="#b-space">Flow</a>
+        <a href="#desk-rejection">Desk Reject</a>
+        <a href="#review-recommendation">Review Recs</a>
+        <a href="#figure4">Acceptance</a>
+        <a href="#c-space">Scores</a>
+        <a href="#sources">Sources</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="slides visual-slides" aria-hidden="true">
+          <div class="slide active" style="background-image: url('charlesdeluvio-Lks7vei-eAg-unsplash.jpg')"></div>
+        </div>
+        <div class="hero-overlay-top" aria-hidden="true"></div>
+        <div class="hero-overlay-bottom" aria-hidden="true"></div>
+        <div class="hero-noise" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Fairness in scholarly publishing</p>
+          <h1 id="hero-title">Peer Review and Gender Bias</h1>
+          <p class="lead">
+            Evidence from submission and peer-review records across 145 scholarly journals, focusing on gender representation among authors and reviewers, review scores, and final editorial decisions.
+          </p>
+        </div>
+        <div class="slide-info" aria-hidden="true">
+          <span class="slide-info-year">145</span>
+          <span class="slide-info-team">Journals</span>
+          <span class="slide-info-label">Peer Review Dataset</span>
+        </div>
+        <div class="slide-progress-wrap" aria-hidden="true">
+          <div class="slide-progress-bar"></div>
+        </div>
+      </section>
+
+      <section id="overview" class="section overview" aria-labelledby="overview-title">
+        <div class="section-title">
+          <p class="eyebrow">Figure 1 · Opening KPI Cards</p>
+          <h2 id="overview-title">Dataset Overview</h2>
+          <p>These indicators summarize the scale of the dataset: journals, manuscripts, authors, review records, and the main observation period.</p>
+        </div>
+        <div id="kpi-grid" class="metric-grid" aria-label="Figure 1 KPI cards"></div>
+      </section>
+
+      <section id="method" class="section method" aria-labelledby="method-title">
+        <div class="section-title">
+          <p class="eyebrow">Data & Method</p>
+          <h2 id="method-title">Data and Analytical Variables</h2>
+          <p>The analysis links manuscript submissions, author composition, reviewer assignment, review recommendations, and final editorial decisions.</p>
+        </div>
+        <div class="method-grid">
+          <article class="method-card">
+            <button class="method-toggle" type="button" aria-expanded="false">
+              <span>01</span>
+              <h3>Study Sample</h3>
+            </button>
+            <p>Submission and peer-review records from 145 journals across biomedicine and health, life sciences, physical sciences, and social sciences and humanities.</p>
+          </article>
+          <article class="method-card">
+            <button class="method-toggle" type="button" aria-expanded="false">
+              <span>02</span>
+              <h3>Key Variables</h3>
+            </button>
+            <p>Female author share, female reviewer share, review score, reviewer agreement, review type, journal impact factor, desk rejection, and final acceptance.</p>
+          </article>
+          <article class="method-card">
+            <button class="method-toggle" type="button" aria-expanded="false">
+              <span>03</span>
+              <h3>Processing</h3>
+            </button>
+            <p>Records are grouped by discipline to compare author and reviewer gender composition, while preserving the flow from submission to final decision.</p>
+          </article>
+          <article class="method-card">
+            <button class="method-toggle" type="button" aria-expanded="false">
+              <span>04</span>
+              <h3>Visual Encoding</h3>
+            </button>
+            <p>KPI cards summarize scale; the dumbbell chart compares representation; Sankey, dot, and line charts trace process and outcomes.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="fields" class="section split" aria-labelledby="fields-title">
+        <div class="section-title sticky-note">
+          <p class="eyebrow">Figure 2 · Dumbbell Chart</p>
+          <h2 id="fields-title">Gender Representation by Field</h2>
+          <p>
+            Each line represents one field. The two endpoints compare the share of women among authors and referees; longer distances indicate larger representation gaps.
+          </p>
+          <div class="legend">
+            <span><i class="swatch author"></i>Female authors</span>
+            <span><i class="swatch reviewer"></i>Female referees</span>
+          </div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-head">
+            <h3>Female authors and referees by field</h3>
+            <p class="chart-caption">Female author share and female referee share are averaged by field to compare representation gaps.</p>
+          </div>
+          <div id="dumbbell-chart" class="chart" role="img" aria-label="Dumbbell chart comparing female authors and female referees by field"></div>
+        </div>
+      </section>
+
+      <section id="b-space" class="section b-section" aria-labelledby="b-title">
+        <div class="section-title">
+          <p class="eyebrow">Review Process</p>
+          <h2 id="b-title">Review Pathways and Acceptance Rates</h2>
+          <p>Manuscripts pass through multiple stages before a final decision. The flow chart traces these pathways, while the dot plot compares acceptance rates by author group and discipline.</p>
+        </div>
+
+        <div class="b-chart-stack">
+          <article id="figure3" class="chart-card b-chart-card">
+            <div class="chart-head">
+              <div>
+                <p class="eyebrow">Figure 3 · Sankey Flow</p>
+                <h3>Manuscript pathways</h3>
+                <p class="chart-caption">Each vertical node represents a review stage or outcome; link width encodes the number of manuscripts following that path.</p>
+              </div>
+            </div>
+            <div id="b-sankey-chart" class="wide-chart" role="img" aria-label="Peer review flow Sankey diagram"></div>
+          </article>
+
+          <article id="desk-rejection" class="chart-card b-chart-card r-chart-card" aria-labelledby="desk-rejection-title">
+            <div class="chart-head">
+              <div>
+                <p class="eyebrow">Before External Review</p>
+                <h3 id="desk-rejection-title">Desk rejection by discipline and author group</h3>
+                <p class="chart-caption">Author-group icons mark each category. Their horizontal positions show desk rejection rates within each discipline, and the dashed guide marks that discipline's average.</p>
+              </div>
+              <div id="r-average-chip" class="average-chip">Field avg</div>
+            </div>
+            <div id="desk-rejection-chart" class="wide-chart r-wide-chart" role="img" aria-label="Desk rejection rate by discipline and author group"></div>
+          </article>
+
+          <article id="review-recommendation" class="chart-card b-chart-card rec-chart-card" aria-labelledby="review-recommendation-title">
+            <div class="chart-head">
+              <div>
+                <p class="eyebrow">Peer Review Recommendation</p>
+                <h3 id="review-recommendation-title">Reviewer recommendation mix by author group</h3>
+                <p class="chart-caption">This heatmap focuses on manuscripts that passed desk screening. Rows compare disciplines, columns compare author groups, and cell color encodes the share receiving a positive recommendation: accept or minor revision. Darker cells indicate fewer positive recommendations; greener cells indicate higher positive recommendation shares.</p>
+              </div>
+              <div id="rec-legend" class="rec-legend" aria-label="Positive recommendation color scale"></div>
+            </div>
+            <div id="recommendation-chart" class="wide-chart rec-wide-chart" role="img" aria-label="Positive recommendation heatmap by discipline and author group"></div>
+          </article>
+
+          <article id="figure4" class="chart-card b-chart-card">
+            <div class="chart-head">
+              <div>
+                <p class="eyebrow">Figure 4 · Dot Plot</p>
+                <h3>Acceptance rate by author group</h3>
+                <p class="chart-caption">Each point represents an author-gender group within a discipline; point size encodes manuscript count.</p>
+              </div>
+              <div id="b-dot-legend" class="dot-legend" aria-label="Author group legend"></div>
+            </div>
+            <div id="b-dot-chart" class="wide-chart" role="img" aria-label="Acceptance rate dot plot by discipline and author gender group"></div>
+          </article>
+        </div>
+        <div id="b-tooltip" class="chart-tooltip"></div>
+        <div id="r-tooltip" class="chart-tooltip"></div>
+      </section>
+
+      <section id="c-space" class="section c-section" aria-labelledby="c-title">
+        <div class="section-title">
+          <p class="eyebrow">Score & Insight</p>
+          <h2 id="c-title">Review Scores and Final Acceptance</h2>
+          <p>Higher review scores are generally associated with higher predicted acceptance. These charts compare author groups at comparable scores.</p>
+        </div>
+        <div class="c-chart-stack">
+          <article id="figure5" class="chart-card c-chart-card">
+            <div class="chart-head">
+              <div>
+                <p class="eyebrow">Figure 5 · Main Chart</p>
+                <h3>Review score and final acceptance</h3>
+                <p class="chart-caption">Across four disciplines, higher review scores correspond to higher predicted final acceptance; color compares all-men and all-women author groups.</p>
+              </div>
+              <div id="c-main-legend" class="dot-legend"></div>
+            </div>
+            <div id="c-main-chart" class="c-chart-surface" role="img" aria-label="Review score and predicted final acceptance faceted line chart"></div>
+          </article>
+
+          <div class="c-secondary-grid">
+            <article class="chart-card c-chart-card">
+              <div class="chart-head">
+                <div>
+                  <p class="eyebrow">Figure 5 · Validation</p>
+                  <h3>Grouped validation</h3>
+                  <p class="chart-caption">Grouped validation data are used to check the upward trend; point size represents the number of records in each bin.</p>
+                </div>
+              </div>
+              <div id="c-validation-chart" class="c-chart-surface compact" role="img" aria-label="Grouped validation chart"></div>
+            </article>
+
+            <article class="chart-card c-chart-card">
+              <div class="chart-head">
+                <div>
+                  <p class="eyebrow">Figure 5 · Group Difference</p>
+                  <h3>Women minus men</h3>
+                  <p class="chart-caption">Difference is calculated as all-women minus all-men predicted acceptance at the same review score and discipline.</p>
+                </div>
+              </div>
+              <div id="c-difference-chart" class="c-chart-surface compact" role="img" aria-label="Author group difference chart"></div>
+            </article>
+          </div>
+
+          <article class="chart-card c-chart-card">
+            <div class="chart-head">
+              <div>
+                <p class="eyebrow">Figure 5 · Distribution</p>
+                <h3>Predicted acceptance distribution</h3>
+                <p class="chart-caption">Predicted acceptance distributions are shown by discipline and author group to summarize the size of differences.</p>
+              </div>
+              <div id="c-box-legend" class="dot-legend"></div>
+            </div>
+            <div id="c-box-chart" class="c-chart-surface" role="img" aria-label="Predicted acceptance box plot"></div>
+          </article>
+        </div>
+
+        <div id="figure6" class="section-title c-insight-title">
+          <p class="eyebrow">Figure 6 · Insight / Limitation Panel</p>
+          <h2>Findings and Limitations</h2>
+          <p>The evidence does not show a stable, systematic penalty against women authors after manuscripts enter peer review. This does not mean scholarly publishing is gender-equal overall.</p>
+        </div>
+
+        <div class="lit-layout">
+          <article class="lit-card lit-card-wide lit-card-main">
+            <div class="lit-topline"></div>
+            <div class="lit-index">01</div>
+            <h3>Main Finding</h3>
+            <p>Women remain <span class="highlight">underrepresented</span> in scholarly publishing: female author shares are lower, female reviewer participation is limited, and women are also less represented in editorial roles.</p>
+            <p>However, after manuscripts enter peer review, the study does not find a persistent, systematic penalty against women authors.</p>
+            <div class="lit-mini-row">
+              <div class="lit-mini-note">
+                <strong>Context</strong>
+                <span>Women are underrepresented among authors, reviewers, and editors.</span>
+              </div>
+              <div class="lit-mini-note">
+                <strong>Core Result</strong>
+                <span>No systematic penalty against women authors is detected within peer review.</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="lit-card">
+            <div class="lit-topline"></div>
+            <div class="lit-index">02</div>
+            <h3>Scope of Interpretation</h3>
+            <p>The result applies to manuscripts that have already entered peer review; it does not cover all earlier selection processes.</p>
+            <p>Gender inequality may still operate before submission through research resources, networks, promotion, and long-term retention.</p>
+          </article>
+
+          <article class="lit-card">
+            <div class="lit-topline"></div>
+            <div class="lit-index">03</div>
+            <h3>Reviewer Assignment</h3>
+            <p>According to the original study, reviewer assignment shows some <span class="highlight">gender homophily</span>: manuscripts with higher shares of women authors are more likely to be assigned women reviewers.</p>
+            <p>This indicates that reviewer selection is not fully gender-neutral, although the study does not find that this pattern translates into a systematic penalty against women authors.</p>
+          </article>
+
+          <article class="lit-card lit-card-wide">
+            <div class="lit-topline"></div>
+            <div class="lit-index">04</div>
+            <h3>Disciplinary Differences</h3>
+            <div class="lit-two-col">
+              <div>
+                <strong>Review recommendations</strong>
+                <p>Model results suggest that the relationship between women-author share and review recommendations varies by discipline, with positive patterns in biomedicine and social sciences but weaker or negative patterns in other fields.</p>
+              </div>
+              <div>
+                <strong>Editorial decisions</strong>
+                <p>Editorial decisions do not follow the same pattern as reviewer recommendations: some fields show higher predicted acceptance for manuscripts with more women authors, while others show no stable effect.</p>
+              </div>
+            </div>
+            <div class="lit-callout">The key point is that reviewer recommendations and editorial decisions are not equivalent. Gender-related patterns can differ across disciplines and across stages of the review process.</div>
+          </article>
+
+          <article class="lit-card lit-card-wide">
+            <div class="lit-topline"></div>
+            <div class="lit-index">05</div>
+            <h3>Related Evidence</h3>
+            <p>Fairness in peer review is not only reflected in final acceptance. It can also appear in reviewer assignment, author visibility, institutional prestige, and review anonymity.</p>
+            <div class="reference-list">
+              <div class="reference-item">
+                <strong>Helmer et al. (2017)</strong>
+                <span>Women are underrepresented among editors and reviewers, and reviewer selection shows gender homophily.</span>
+              </div>
+              <div class="reference-item">
+                <strong>Tomkins et al. (2017)</strong>
+                <span>Single-blind review can advantage well-known authors and authors from high-prestige institutions.</span>
+              </div>
+              <div class="reference-item">
+                <strong>Witteman et al. (2019)</strong>
+                <span>Women applicants are disadvantaged when evaluation focuses on applicant track record rather than proposal quality.</span>
+              </div>
+              <div class="reference-item">
+                <strong>Kern-Goldberger et al. (2022)</strong>
+                <span>Double-blind review may reduce gender bias, although empirical findings are not fully consistent.</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="lit-card lit-card-wide lit-card-final">
+            <div class="lit-topline"></div>
+            <div class="lit-index">06</div>
+            <h3>Limitations and Implications</h3>
+            <div class="lit-two-col">
+              <div>
+                <strong>Model limits</strong>
+                <p>The model explains only part of the variation in review recommendations. Manuscript quality, novelty, author reputation, and institutional resources are difficult to measure fully.</p>
+              </div>
+              <div>
+                <strong>Identity variables</strong>
+                <p>The analysis focuses mainly on gender and does not fully incorporate race, region, socioeconomic background, or other intersecting identities.</p>
+              </div>
+            </div>
+            <div class="lit-callout strong">The value of the study is not to claim that gender inequality is absent, but to locate where inequality is more likely to emerge: often before or outside the peer-review stage itself.</div>
+          </article>
+        </div>
+        <div id="c-tooltip" class="chart-tooltip"></div>
+      </section>
+
+      <section id="sources" class="section source-band" aria-labelledby="source-title">
+        <div class="source-heading">
+          <p class="eyebrow">Sources</p>
+          <h2 id="source-title">Data and Sources</h2>
+        </div>
+        <div class="source-detail">
+          <div class="source-card">
+            <strong>Article</strong>
+            <p>Squazzoni et al. (2021), <em>Science Advances</em>, “Peer review and gender bias: A study on 145 scholarly journals”。</p>
+          </div>
+          <div class="source-card">
+            <strong>Data Files</strong>
+            <p>Supplementary data and code include <code>Codebook.docx</code>, <code>AllPapers.RData</code>, <code>analysisPublic.R</code>, <code>SiBN.R</code>, and related model outputs.</p>
+          </div>
+          <div class="source-card">
+            <strong>Visual Structure</strong>
+            <p>Figures 1-2 summarize data scale and representation gaps; the desk rejection chart adds the pre-review screening step; Figures 3-4 show review pathways and acceptance rates; Figures 5-6 connect scores, decisions, and interpretation.</p>
+          </div>
+          <div class="source-card">
+            <strong>Analytical Focus</strong>
+            <p>The page focuses on two questions: representation among authors and reviewers, and the relationship between review scores, editorial decisions, and final outcomes.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="d3.v7.min.js"></script>
+    <script src="d3-sankey.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

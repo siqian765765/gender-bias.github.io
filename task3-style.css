@@ -1,0 +1,1782 @@
+/* Final style pass modeled after the provided Task 3 site, adapted to this project. */
+:root {
+  --tk-green: #3cac3b;
+  --tk-blue: #2a398d;
+  --tk-red: #e61d25;
+  --tk-ink: #f3f4f6;
+  --tk-muted: rgba(243, 244, 246, 0.58);
+  --tk-bg: #0a0a0a;
+  --tk-bg2: #111111;
+  --tk-bg3: #181818;
+  --tk-border: rgba(255, 255, 255, 0.08);
+  --tk-card: rgba(255, 255, 255, 0.045);
+  --tk-shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+}
+
+body {
+  background: var(--tk-bg);
+  color: var(--tk-ink);
+  font-family: "Noto Sans SC", "Noto Sans", sans-serif;
+}
+
+.topbar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 40;
+  height: 64px;
+  padding: 18px 48px;
+  background: linear-gradient(180deg, rgba(0,0,0,.72), rgba(0,0,0,0));
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.brand {
+  color: #fff;
+  font-family: "Oswald", "Noto Sans SC", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 4px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--tk-green), var(--tk-blue), var(--tk-red));
+}
+
+nav {
+  gap: 6px;
+}
+
+nav a {
+  padding: 6px 14px;
+  color: rgba(255,255,255,.62);
+  border-radius: 4px;
+  font-family: "Oswald", "Noto Sans SC", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #fff;
+  background: rgba(255,255,255,.08);
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+  display: block;
+  padding: 0;
+  background: #000;
+  text-align: left;
+}
+
+.visual-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.06);
+  transition:
+    opacity 1.2s cubic-bezier(.4,0,.2,1),
+    transform 7s ease-out;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-overlay-top,
+.hero-overlay-bottom,
+.hero-noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-overlay-top {
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(0,0,0,.78), rgba(0,0,0,.15) 42%, transparent 62%);
+}
+
+.hero-overlay-bottom {
+  z-index: 3;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.94) 0%, rgba(0,0,0,.70) 34%, rgba(0,0,0,.12) 70%),
+    linear-gradient(0deg, rgba(0,0,0,.98), rgba(0,0,0,.40) 34%, transparent 68%);
+}
+
+.hero-noise {
+  z-index: 4;
+  opacity: .45;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+.hero-copy {
+  position: absolute;
+  z-index: 10;
+  left: clamp(28px, 6vw, 76px);
+  bottom: 28%;
+  max-width: min(1280px, calc(100vw - 96px));
+}
+
+.hero .eyebrow {
+  color: var(--tk-green);
+  font-family: "Oswald", "Noto Sans SC", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 100%;
+  color: #fff;
+  font-family: "Noto Serif SC", "Noto Sans SC", serif;
+  font-size: clamp(3.2rem, 6.8vw, 7.1rem);
+  line-height: 0.95;
+  letter-spacing: -0.075em;
+  text-shadow: 0 8px 42px rgba(0,0,0,.64);
+  white-space: nowrap;
+}
+
+.lead {
+  max-width: 680px;
+  margin: 18px 0 0;
+  color: rgba(255,255,255,.74);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+.hero-panel,
+.hero-scale,
+.verdict {
+  display: none;
+}
+
+.hero-visual {
+  display: none;
+}
+
+.slide-info {
+  position: absolute;
+  z-index: 12;
+  right: 48px;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  transform: translateY(-50%);
+}
+
+.slide-info-year {
+  color: rgba(255,255,255,.14);
+  font-family: "Bebas Neue", "Oswald", sans-serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: .85;
+}
+
+.slide-info-team {
+  color: rgba(255,255,255,.70);
+  font-family: "Oswald", "Noto Sans SC", sans-serif;
+  font-size: 1rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.slide-info-label {
+  margin-top: 4px;
+  color: rgba(255,255,255,.42);
+  font-size: .7rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.slide-progress-wrap {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: rgba(255,255,255,.08);
+}
+
+.slide-progress-bar {
+  height: 100%;
+  width: 100%;
+  transform-origin: left center;
+  background: linear-gradient(90deg, var(--tk-green), var(--tk-blue), var(--tk-red));
+  animation: heroProgress 6s linear infinite;
+}
+
+@keyframes heroProgress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.showcase {
+  display: none;
+}
+
+.section,
+.split,
+.source-band {
+  width: min(1320px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: clamp(64px, 8vw, 110px) 0;
+  background: transparent;
+}
+
+.section-title {
+  max-width: 820px;
+  margin: 0 0 28px;
+  padding: 0;
+  text-align: left;
+}
+
+.section-title.centered,
+.source-heading {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-title .eyebrow,
+.source-heading .eyebrow {
+  color: var(--tk-green);
+  font-family: "Oswald", "Noto Sans SC", sans-serif;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+h2 {
+  max-width: none;
+  color: #fff;
+  font-family: "Noto Serif SC", "Noto Sans SC", serif;
+  font-size: clamp(2.8rem, 5.2vw, 5.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+
+.section-title p:not(.eyebrow) {
+  max-width: 740px;
+  margin: 14px 0 0;
+  color: var(--tk-muted);
+  font-size: .95rem;
+  line-height: 1.75;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.metric,
+.method-card,
+.chart-card,
+.source-card,
+.lit-card {
+  border: 1px solid var(--tk-border);
+  border-radius: 10px;
+  background: var(--tk-card);
+  box-shadow: none;
+  backdrop-filter: blur(10px);
+}
+
+.metric {
+  position: relative;
+  min-height: 150px;
+  padding: 20px;
+  overflow: hidden;
+  background:
+    linear-gradient(160deg, rgba(255,255,255,.08), rgba(255,255,255,.025)),
+    rgba(255,255,255,.04);
+  transition:
+    transform .24s ease,
+    border-color .24s ease,
+    background .24s ease;
+}
+
+.metric:nth-child(2),
+.metric:nth-child(3) {
+  grid-column: span 2;
+}
+
+.metric:nth-child(5),
+.metric:nth-child(6) {
+  grid-column: span 3;
+  min-height: 118px;
+}
+
+.metric::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--tk-green);
+}
+
+.metric::after {
+  content: "";
+  position: absolute;
+  right: -28px;
+  bottom: -34px;
+  width: 116px;
+  height: 116px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 50%;
+}
+
+.metric:nth-child(2)::before,
+.metric:nth-child(5)::before {
+  background: #e8a020;
+}
+
+.metric:nth-child(3)::before,
+.metric:nth-child(6)::before {
+  background: var(--tk-blue);
+}
+
+.metric:nth-child(4)::before {
+  background: var(--tk-red);
+}
+
+.metric:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,.16);
+  background:
+    linear-gradient(160deg, rgba(255,255,255,.105), rgba(255,255,255,.035)),
+    rgba(255,255,255,.055);
+}
+
+.metric span,
+.metric small {
+  position: relative;
+  z-index: 1;
+  color: var(--tk-muted);
+}
+
+.metric span {
+  display: block;
+  color: rgba(255,255,255,.78);
+  font-family: "Oswald", "Noto Sans SC", sans-serif;
+  font-size: .78rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.metric strong {
+  position: relative;
+  z-index: 1;
+  margin: 12px 0 8px;
+  color: #fff;
+  font-family: "Bebas Neue", "Oswald", sans-serif;
+  font-size: clamp(2.35rem, 3.8vw, 4.35rem);
+  line-height: .9;
+  letter-spacing: .02em;
+}
+
+.metric:nth-child(2) strong,
+.metric:nth-child(3) strong {
+  font-size: clamp(3rem, 5.2vw, 5.8rem);
+}
+
+.metric:nth-child(5) strong,
+.metric:nth-child(6) strong {
+  font-size: clamp(2.4rem, 4vw, 4.4rem);
+}
+
+.metric em {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  color: rgba(255,255,255,.16);
+  font-family: "Oswald", "Noto Sans SC", sans-serif;
+  font-size: .68rem;
+  font-style: normal;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.method-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.method-card {
+  min-height: 190px;
+  padding: 20px;
+}
+
+.method-card span {
+  border-radius: 4px;
+  background: var(--tk-blue);
+  font-family: "Oswald", "Noto Sans SC", sans-serif;
+}
+
+.method-card h3,
+.chart-head h3,
+.lit-card h3,
+.source-card strong {
+  color: #fff;
+}
+
+.method-card p,
+.chart-caption,
+.lit-card p,
+.source-card p,
+.lit-mini-note span,
+.reference-item span {
+  color: var(--tk-muted);
+}
+
+.section-visual {
+  width: 100%;
+  height: clamp(220px, 27vw, 360px);
+  margin: 22px 0 18px;
+  border: 1px solid var(--tk-border);
+  border-radius: 12px;
+  background: var(--tk-bg2);
+  box-shadow: var(--tk-shadow);
+}
+
+.chart-card {
+  width: 100%;
+  padding: 20px;
+}
+
+.chart-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--tk-border);
+}
+
+.chart-head > div:first-child {
+  min-width: 0;
+  width: 100%;
+}
+
+.chart-caption {
+  max-width: none;
+  width: 100%;
+}
+
+.wide-chart,
+.c-chart-surface,
+.chart {
+  background: transparent;
+}
+
+.axis text,
+.axis-title,
+.gap-title,
+.value-label,
+.gap-label,
+.panel-title,
+.b-sankey-node text,
+.b-dot-label {
+  fill: rgba(255,255,255,.70);
+}
+
+.axis path,
+.axis line {
+  stroke: rgba(255,255,255,.14);
+}
+
+.grid line,
+.b-discipline-guides line {
+  stroke: rgba(255,255,255,.08);
+}
+
+.dot-legend-item,
+.legend span {
+  color: rgba(255,255,255,.72);
+}
+
+.b-chart-stack,
+.c-chart-stack,
+.lit-layout {
+  gap: 18px;
+}
+
+.c-insight-title {
+  margin-top: clamp(48px, 6vw, 86px);
+}
+
+.lit-card {
+  border-radius: 10px;
+  background: rgba(255,255,255,.035);
+}
+
+.lit-mini-note,
+.lit-two-col > div,
+.reference-item,
+.lit-callout {
+  border: 1px solid var(--tk-border);
+  background: rgba(0,0,0,.20);
+}
+
+.lit-callout.strong {
+  color: #fff;
+  background: rgba(60,172,59,.10);
+}
+
+.lit-topline {
+  background: linear-gradient(90deg, var(--tk-green), var(--tk-blue), var(--tk-red));
+}
+
+.source-detail {
+  gap: 14px;
+}
+
+.chart-tooltip {
+  background: rgba(0,0,0,.92);
+  border: 1px solid var(--tk-border);
+  border-radius: 8px;
+}
+
+.average-chip {
+  min-width: 150px;
+  padding: 9px 12px;
+  border: 1px solid rgba(101,201,106,.28);
+  border-radius: 999px;
+  background: rgba(101,201,106,.08);
+  color: rgba(245,247,251,.78);
+  font-size: .82rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.r-wide-chart {
+  min-height: 760px;
+}
+
+.r-row-bg {
+  fill: #15181d;
+  stroke: rgba(255,255,255,.055);
+}
+
+.r-discipline-label,
+.r-rate-label {
+  fill: #f5f7fb;
+  font-weight: 900;
+}
+
+.r-discipline-label {
+  font-size: 18px;
+}
+
+.r-rate-label {
+  font-size: 10px;
+  paint-order: stroke;
+  stroke: #15181d;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+.r-group-meta,
+.r-axis-label,
+.r-legend-label {
+  fill: rgba(245,247,251,.58);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.r-lollipop-stem {
+  stroke: rgba(255,255,255,.22);
+  stroke-width: 1.5;
+}
+
+.r-rate-dot {
+  fill: #65c96a;
+  stroke: #0b0d10;
+  stroke-width: 2;
+}
+
+.r-avg-line {
+  stroke: #65c96a;
+  stroke-width: 2;
+  stroke-dasharray: 5 7;
+}
+
+.r-avg-label {
+  fill: rgba(101,201,106,.9);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.r-person {
+  cursor: pointer;
+}
+
+.r-mark {
+  cursor: pointer;
+}
+
+.rec-wide-chart {
+  min-height: 560px;
+}
+
+.rec-legend {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: rgba(245,247,251,.62);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.rec-legend i {
+  width: 92px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #14171d, #27486f, #3d8bc4, #65c96a);
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+.rec-column-labels text,
+.rec-heat-value,
+.rec-heat-sub {
+  fill: rgba(245,247,251,.70);
+  font-weight: 800;
+}
+
+.rec-column-labels text {
+  font-size: 12px;
+}
+
+.rec-heat-value {
+  fill: #fff;
+  font-size: 18px;
+  paint-order: stroke;
+  stroke: rgba(0,0,0,.42);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.rec-heat-sub {
+  fill: rgba(255,255,255,.72);
+  font-size: 10px;
+}
+
+.rec-tile {
+  cursor: pointer;
+  stroke: rgba(255,255,255,.08);
+  stroke-width: 1;
+}
+
+.rec-tile.is-active {
+  stroke: rgba(255,255,255,.85);
+  stroke-width: 2;
+  filter: url(#rec-tile-glow);
+}
+
+main > section:not(.hero) .eyebrow,
+.chart-head .eyebrow,
+.source-heading .eyebrow,
+#r-average-chip,
+.r-avg-label {
+  display: none;
+}
+
+.hero .eyebrow {
+  display: block;
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    min-height: 920px;
+  }
+
+  .hero-copy,
+  .hero-panel {
+    left: 28px;
+    right: 28px;
+    width: auto;
+  }
+
+  .hero-copy {
+    bottom: 42%;
+  }
+
+  .hero-panel {
+    bottom: 18%;
+  }
+
+  .slide-info {
+    display: none;
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .metric:nth-child(2),
+  .metric:nth-child(3),
+  .metric:nth-child(5),
+  .metric:nth-child(6) {
+    grid-column: span 1;
+  }
+
+  .method-grid,
+  .c-secondary-grid,
+  .source-detail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    position: absolute;
+    height: auto;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    font-size: clamp(2.15rem, 12vw, 3.8rem);
+    white-space: nowrap;
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 12vw, 3.6rem);
+  }
+
+  .metric-grid,
+  .method-grid,
+  .c-secondary-grid,
+  .source-detail,
+  .lit-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .lit-card-wide {
+    grid-column: span 1;
+  }
+}
+
+/* Submission polish: quieter typography and dashboard-first hierarchy. */
+body {
+  background:
+    radial-gradient(circle at 50% -12%, rgba(50, 58, 76, .22), transparent 38%),
+    #08090b;
+  font-family: "Noto Sans SC", "Noto Sans", sans-serif;
+}
+
+.topbar {
+  height: 58px;
+  padding: 15px 42px;
+  background: rgba(8, 9, 11, .82);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  backdrop-filter: blur(18px);
+}
+
+.brand,
+nav a,
+.hero .eyebrow,
+.section-title .eyebrow,
+.source-heading .eyebrow,
+.metric span,
+.metric em,
+.method-card span,
+.slide-info-team {
+  font-family: "Noto Sans SC", "Noto Sans", sans-serif;
+  letter-spacing: .04em;
+}
+
+.brand {
+  font-size: .82rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+nav a {
+  color: rgba(255,255,255,.58);
+  font-size: .76rem;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.hero {
+  min-height: 100svh;
+}
+
+.hero-copy {
+  bottom: 24%;
+  max-width: min(980px, calc(100vw - 96px));
+}
+
+.hero .eyebrow,
+.section-title .eyebrow,
+.source-heading .eyebrow {
+  color: #65c96a;
+  font-size: .78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: "Noto Sans SC", "Noto Sans", sans-serif;
+  font-size: clamp(3.2rem, 5.8vw, 5.8rem);
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.lead {
+  max-width: 760px;
+  color: rgba(255,255,255,.72);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.slide-info-year {
+  font-family: "Noto Sans SC", "Noto Sans", sans-serif;
+  font-weight: 900;
+  letter-spacing: -.04em;
+}
+
+.section,
+.split,
+.source-band {
+  width: min(1180px, calc(100% - 56px));
+  padding: clamp(58px, 7vw, 92px) 0;
+}
+
+.section-title {
+  max-width: 760px;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-family: "Noto Sans SC", "Noto Sans", sans-serif;
+  font-size: clamp(2rem, 3.7vw, 3.45rem);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.section-title p:not(.eyebrow) {
+  max-width: 720px;
+  color: rgba(243,244,246,.62);
+  font-size: .95rem;
+  line-height: 1.75;
+}
+
+.metric-grid {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.metric {
+  grid-column: span 3;
+  min-height: 126px;
+  padding: 18px;
+  border-radius: 8px;
+  background: #111316;
+  border-color: rgba(255,255,255,.075);
+  backdrop-filter: none;
+}
+
+.metric:nth-child(2),
+.metric:nth-child(3) {
+  grid-column: span 3;
+}
+
+.metric:nth-child(5),
+.metric:nth-child(6) {
+  grid-column: span 6;
+  min-height: 112px;
+}
+
+.metric::after {
+  display: none;
+}
+
+.metric:hover {
+  transform: none;
+  background: #14171b;
+}
+
+.metric span {
+  color: rgba(255,255,255,.56);
+  font-size: .76rem;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.metric strong,
+.metric:nth-child(2) strong,
+.metric:nth-child(3) strong,
+.metric:nth-child(5) strong,
+.metric:nth-child(6) strong {
+  margin: 14px 0 10px;
+  font-family: "Noto Sans SC", "Noto Sans", sans-serif;
+  font-size: clamp(2rem, 3.8vw, 4rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+
+.metric small {
+  color: rgba(255,255,255,.54);
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+.metric em {
+  color: rgba(255,255,255,.18);
+  font-size: .65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.method-card,
+.chart-card,
+.source-card,
+.lit-card {
+  border-radius: 8px;
+  background: #111316;
+  border-color: rgba(255,255,255,.075);
+  backdrop-filter: none;
+}
+
+.method-card {
+  min-height: 82px;
+}
+
+.method-toggle {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.method-toggle::after {
+  content: "+";
+  color: rgba(255,255,255,.46);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.method-card.open .method-toggle::after {
+  content: "-";
+}
+
+.method-toggle:focus-visible {
+  outline: 2px solid rgba(101,201,106,.9);
+  outline-offset: 4px;
+}
+
+.method-toggle h3 {
+  margin: 0;
+}
+
+.method-card span {
+  width: 28px;
+  height: 28px;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 28px;
+  border-radius: 6px;
+  background: #2f7de1;
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.chart-card {
+  padding: 18px;
+}
+
+.chart-head h3,
+.method-card h3,
+.lit-card h3,
+.source-card strong {
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.chart-caption,
+.method-card p,
+.lit-card p,
+.source-card p,
+.lit-mini-note span,
+.reference-item span {
+  color: rgba(243,244,246,.58);
+  line-height: 1.65;
+}
+
+.chart-head .chart-caption {
+  max-width: none;
+  width: 100%;
+}
+
+.method-card p {
+  max-height: 0;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height .28s ease,
+    margin-top .28s ease,
+    opacity .2s ease;
+}
+
+.method-card.open p {
+  max-height: 160px;
+  margin-top: 14px;
+  opacity: 1;
+}
+
+.lit-layout {
+  gap: 14px;
+}
+
+.lit-card {
+  padding: 18px;
+}
+
+.lit-card:hover {
+  transform: none;
+  background: #111316;
+  border-color: rgba(255,255,255,.075);
+  color: inherit;
+}
+
+.lit-card:hover h3 { color: #f7f8fa; }
+.lit-card:hover p { color: rgba(243,244,246,.76); }
+.lit-card:hover strong { color: rgba(255,255,255,.86); }
+.lit-card:hover span { color: inherit; }
+
+.lit-card:hover::after {
+  opacity: 0;
+}
+
+.lit-index {
+  color: rgba(255,255,255,.10);
+  font-family: "Noto Sans SC", "Noto Sans", sans-serif;
+  font-size: 2rem;
+}
+
+.lit-mini-note,
+.lit-two-col > div,
+.reference-item,
+.lit-callout {
+  background: rgba(0,0,0,.16);
+  border-color: rgba(255,255,255,.06);
+}
+
+.lit-two-col > div strong,
+.lit-card:hover .lit-two-col > div strong,
+.lit-mini-note strong,
+.lit-card:hover .lit-mini-note strong {
+  color: rgba(255,255,255,.86);
+}
+
+.lit-callout,
+.lit-card:hover .lit-callout {
+  color: rgba(255,255,255,.88);
+}
+
+.lit-two-col p,
+.lit-card:hover .lit-two-col p {
+  color: rgba(255,255,255,.78);
+}
+
+.lit-mini-note span,
+.lit-card:hover .lit-mini-note span,
+.reference-item span,
+.lit-card:hover .reference-item span {
+  color: rgba(243,244,246,.58);
+}
+
+/* Findings section: keep all cards visually stable on hover. */
+.lit-layout .lit-card,
+.lit-layout .lit-card:hover {
+  transform: none;
+  background: #111316;
+  border-color: rgba(255,255,255,.075);
+  color: #f7f8fa;
+}
+
+.lit-layout .lit-card::after,
+.lit-layout .lit-card:hover::after {
+  opacity: 0;
+}
+
+.lit-layout .lit-card h3,
+.lit-layout .lit-card:hover h3 {
+  color: #f7f8fa;
+}
+
+.lit-layout .lit-card p,
+.lit-layout .lit-card:hover p {
+  color: rgba(243,244,246,.68);
+}
+
+.lit-layout .highlight,
+.lit-layout .lit-card:hover .highlight {
+  display: inline;
+  padding: 0 .14em;
+  border-radius: 3px;
+  background: rgba(95,143,240,.26);
+  color: rgba(226,234,248,.92);
+  font-weight: 900;
+}
+
+.lit-layout .lit-mini-note,
+.lit-layout .lit-two-col > div,
+.lit-layout .reference-item,
+.lit-layout .lit-callout,
+.lit-layout .lit-card:hover .lit-mini-note,
+.lit-layout .lit-card:hover .lit-two-col > div,
+.lit-layout .lit-card:hover .reference-item,
+.lit-layout .lit-card:hover .lit-callout {
+  background: rgba(0,0,0,.16);
+  border-color: rgba(255,255,255,.06);
+  color: rgba(243,244,246,.68);
+}
+
+.lit-layout .lit-mini-note strong,
+.lit-layout .lit-two-col strong,
+.lit-layout .reference-item strong,
+.lit-layout .lit-card:hover .lit-mini-note strong,
+.lit-layout .lit-card:hover .lit-two-col strong,
+.lit-layout .lit-card:hover .reference-item strong {
+  color: rgba(255,255,255,.86);
+}
+
+.lit-layout .lit-mini-note span,
+.lit-layout .reference-item span,
+.lit-layout .lit-card:hover .lit-mini-note span,
+.lit-layout .lit-card:hover .reference-item span {
+  color: rgba(243,244,246,.58);
+}
+
+.lit-layout .lit-callout,
+.lit-layout .lit-card:hover .lit-callout {
+  color: rgba(255,255,255,.86);
+}
+
+.lit-layout .lit-callout.strong,
+.lit-layout .lit-card:hover .lit-callout.strong {
+  background: rgba(60,172,59,.10);
+  color: rgba(255,255,255,.90);
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .metric,
+  .metric:nth-child(2),
+  .metric:nth-child(3),
+  .metric:nth-child(5),
+  .metric:nth-child(6) {
+    grid-column: span 1;
+  }
+}
+
+/* ================= FINAL LIGHT MORANDI THEME OVERRIDE ================= */
+/*
+  Final one-pass override for the integrated site.
+  Goal:
+  - Warm off-white global background
+  - Subtle Morandi red/blue ambient background
+  - Light cards and chart surfaces
+  - Dark readable text on light background
+  - Preserve existing chart series colors generated by D3 / SVG
+*/
+
+:root {
+  --tk-bg: #f6efe3;
+  --tk-bg2: #fff8ec;
+  --tk-bg3: #efe4d5;
+  --tk-ink: #24201d;
+  --tk-muted: rgba(50, 45, 40, 0.68);
+  --tk-border: rgba(99, 82, 69, 0.16);
+  --tk-card: rgba(255, 250, 241, 0.76);
+  --tk-shadow: 0 24px 68px rgba(112, 91, 76, 0.12);
+
+  --morandi-red: #a66f6b;
+  --morandi-blue: #6f8fa3;
+  --morandi-red-soft: rgba(166, 111, 107, 0.18);
+  --morandi-blue-soft: rgba(111, 143, 163, 0.20);
+  --cream: #f6efe3;
+  --cream-2: #efe4d5;
+  --cream-card: rgba(255, 250, 241, 0.82);
+  --cream-card-solid: #fff8ec;
+  --cream-chart: rgba(255, 253, 247, 0.72);
+  --dark-text: #24201d;
+  --body-text: rgba(50, 45, 40, 0.78);
+  --muted-text: rgba(50, 45, 40, 0.60);
+  --fine-line: rgba(99, 82, 69, 0.16);
+}
+
+/* Global page surface */
+html,
+body {
+  color: var(--dark-text);
+  background:
+    radial-gradient(circle at 7% 16%, var(--morandi-red-soft), transparent 31rem),
+    radial-gradient(circle at 90% 12%, var(--morandi-blue-soft), transparent 35rem),
+    radial-gradient(circle at 74% 82%, rgba(151, 118, 127, 0.12), transparent 32rem),
+    linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%);
+  background-attachment: fixed;
+}
+
+/* Remove dark full-screen hero treatment and make it part of the light page */
+.hero {
+  background:
+    radial-gradient(circle at 20% 16%, rgba(166, 111, 107, 0.18), transparent 28rem),
+    radial-gradient(circle at 82% 22%, rgba(111, 143, 163, 0.18), transparent 32rem),
+    linear-gradient(180deg, rgba(255, 250, 241, 0.84), rgba(246, 239, 227, 0.92));
+}
+
+.visual-slides,
+.slide,
+.hero-overlay-top,
+.hero-overlay-bottom,
+.hero-noise,
+.slide-progress-wrap,
+.slide-progress-bar {
+  display: none;
+}
+
+.hero-copy {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  max-width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: clamp(120px, 15vw, 190px) 0 clamp(84px, 10vw, 130px);
+}
+
+.slide-info {
+  display: none;
+}
+
+/* Navigation on light background */
+.topbar {
+  background: rgba(246, 239, 227, 0.86);
+  border-bottom: 1px solid var(--fine-line);
+  box-shadow: 0 12px 34px rgba(112, 91, 76, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.brand,
+nav a {
+  color: rgba(36, 32, 29, 0.72);
+}
+
+.brand:hover,
+nav a:hover {
+  color: var(--dark-text);
+}
+
+nav a:hover {
+  background: rgba(111, 143, 163, 0.12);
+}
+
+.brand-mark {
+  background: linear-gradient(90deg, var(--morandi-red), var(--morandi-blue));
+}
+
+/* Core typography: dark text for light background */
+h1,
+h2,
+h3,
+.method-card h3,
+.chart-head h3,
+.lit-card h3,
+.source-card strong,
+.metric strong,
+.lit-mini-note strong,
+.lit-two-col strong,
+.reference-item strong {
+  color: var(--dark-text);
+  text-shadow: none;
+}
+
+body,
+.lead,
+.section-title p:not(.eyebrow),
+.method-card p,
+.chart-caption,
+.lit-card p,
+.source-card p,
+.source-band p,
+.pipeline p,
+.network-copy p,
+.lit-mini-note span,
+.reference-item span,
+.lit-callout,
+.dot-legend-item,
+.legend span {
+  color: var(--body-text);
+}
+
+.section-title .eyebrow,
+.source-heading .eyebrow,
+.hero .eyebrow,
+.eyebrow {
+  color: #7c605e;
+}
+
+/* Page sections stay transparent so the ambient background is visible */
+.section,
+.split,
+.source-band,
+.b-section,
+.c-section {
+  background: transparent;
+}
+
+/* Cards and panels */
+.metric,
+.method-card,
+.chart-card,
+.source-card,
+.lit-card,
+.pipeline article,
+.network-wrap,
+.gauge-card,
+.controls {
+  border: 1px solid var(--fine-line);
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.56), rgba(255, 248, 236, 0.74)),
+    var(--cream-card);
+  box-shadow: var(--tk-shadow);
+  backdrop-filter: blur(12px);
+}
+
+.metric {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.62), rgba(255, 248, 236, 0.78)),
+    var(--cream-card);
+}
+
+.metric:hover {
+  border-color: rgba(166, 111, 107, 0.26);
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.72), rgba(255, 248, 236, 0.90)),
+    var(--cream-card-solid);
+}
+
+.metric span,
+.metric small {
+  color: var(--muted-text);
+}
+
+.metric span {
+  color: rgba(36, 32, 29, 0.72);
+}
+
+.metric em,
+.lit-index {
+  color: rgba(99, 82, 69, 0.18);
+}
+
+/* Keep card accent bars, but move them into Morandi family.
+   This changes decorative card accents only, not chart series colors. */
+.metric::before,
+.lit-topline {
+  background: var(--morandi-red);
+}
+
+.metric:nth-child(2)::before,
+.metric:nth-child(5)::before {
+  background: #b8957a;
+}
+
+.metric:nth-child(3)::before,
+.metric:nth-child(6)::before {
+  background: var(--morandi-blue);
+}
+
+.metric:nth-child(4)::before {
+  background: #b77972;
+}
+
+.metric::after {
+  border-color: rgba(99, 82, 69, 0.14);
+}
+
+.method-card span {
+  color: #fff;
+  background: var(--morandi-blue);
+}
+
+.method-card:nth-child(2) span,
+.method-card:nth-child(3) span,
+.method-card:nth-child(4) span {
+  background: var(--morandi-blue);
+}
+
+/* Chart cards and chart plotting surfaces */
+.chart-card {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.60), rgba(255, 248, 236, 0.82)),
+    var(--cream-card);
+}
+
+.chart-head {
+  border-bottom: 1px solid var(--fine-line);
+}
+
+.chart,
+.wide-chart,
+.c-chart-surface {
+  background: var(--cream-chart);
+  border-radius: 18px;
+}
+
+.chart svg,
+.wide-chart svg,
+.c-chart-surface svg {
+  background: transparent;
+}
+
+/* SVG labels, axes and guide lines: readable on light chart surfaces.
+   Series colors are not targeted here. */
+.axis text,
+.axis-title,
+.gap-title,
+.value-label,
+.gap-label,
+.panel-title,
+.b-sankey-node text,
+.b-dot-label,
+.b-stage-label,
+.rec-cell-label,
+.c-label,
+text.axis-title,
+svg text.axis-title {
+  fill: rgba(36, 32, 29, 0.76);
+}
+
+.axis path,
+.axis line {
+  stroke: rgba(99, 82, 69, 0.24);
+}
+
+.grid line,
+.b-discipline-guides line {
+  stroke: rgba(99, 82, 69, 0.14);
+}
+
+.b-sankey-node rect,
+.b-dot,
+.c-focus-dot,
+.mean-dot {
+  stroke: rgba(255, 253, 247, 0.96);
+}
+
+/* Legends and chips */
+.legend,
+.dot-legend,
+.rec-legend,
+.average-chip {
+  color: var(--body-text);
+}
+
+.dot-legend-item,
+.legend span {
+  color: var(--body-text);
+}
+
+.average-chip,
+.rec-legend {
+  border-color: var(--fine-line);
+  background: rgba(255, 250, 241, 0.74);
+}
+
+/* Supporting content blocks */
+.lit-mini-note,
+.lit-two-col > div,
+.reference-item,
+.lit-callout {
+  border: 1px solid var(--fine-line);
+  background: rgba(255, 250, 241, 0.70);
+}
+
+.lit-callout.strong {
+  color: var(--dark-text);
+  background: rgba(111, 143, 163, 0.13);
+}
+
+.highlight {
+  color: var(--dark-text);
+  background: linear-gradient(to top, rgba(166, 111, 107, 0.20) 48%, transparent 48%);
+}
+
+code {
+  color: var(--dark-text);
+  background: rgba(111, 143, 163, 0.12);
+}
+
+/* Sources / reference area */
+.source-card {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.58), rgba(255, 248, 236, 0.78)),
+    var(--cream-card);
+}
+
+.source-card a,
+.reference-item a {
+  color: #556f81;
+}
+
+/* Tooltips remain dark for contrast above light page */
+.chart-tooltip {
+  color: #fffaf1;
+  background: rgba(36, 32, 29, 0.94);
+  border: 1px solid rgba(255, 250, 241, 0.16);
+  box-shadow: 0 18px 42px rgba(36, 32, 29, 0.22);
+}
+
+/* Error / empty states */
+.error-message {
+  color: #8b4d49;
+  background: rgba(255, 250, 241, 0.82);
+  border: 1px solid rgba(166, 111, 107, 0.22);
+}
+
+/* Form controls, buttons, expandable method cards if present */
+button,
+select,
+input {
+  color: var(--dark-text);
+}
+
+.method-toggle {
+  color: var(--dark-text);
+}
+
+/* Responsive: keep the same light treatment on mobile */
+@media (max-width: 900px) {
+  .topbar {
+    background: rgba(246, 239, 227, 0.94);
+  }
+
+  .hero-copy {
+    max-width: calc(100% - 32px);
+    padding-top: 96px;
+    padding-bottom: 72px;
+  }
+}
+/* ================= END FINAL LIGHT MORANDI THEME OVERRIDE ================= */
+
+/* ================= FINDINGS LIGHT CARD SPECIFICITY FIX ================= */
+/*
+  The original file contains more specific selectors such as:
+  .lit-layout .lit-card
+  .lit-layout .lit-card:hover
+  Those override plain .lit-card rules, so this block must use the same or higher specificity.
+*/
+
+.lit-layout .lit-card,
+.lit-layout .lit-card:hover {
+  transform: none;
+  border: 1px solid var(--fine-line);
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.60), rgba(255, 248, 236, 0.82)),
+    var(--cream-card);
+  color: var(--dark-text);
+  box-shadow: var(--tk-shadow);
+  backdrop-filter: blur(12px);
+}
+
+.lit-layout .lit-card h3,
+.lit-layout .lit-card:hover h3 {
+  color: var(--dark-text);
+}
+
+.lit-layout .lit-card p,
+.lit-layout .lit-card:hover p {
+  color: var(--body-text);
+}
+
+.lit-layout .lit-index,
+.lit-layout .lit-card:hover .lit-index {
+  color: rgba(99, 82, 69, 0.18);
+}
+
+.lit-layout .highlight,
+.lit-layout .lit-card:hover .highlight {
+  display: inline;
+  padding: 0 0.14em;
+  border-radius: 3px;
+  color: var(--dark-text);
+  background: linear-gradient(to top, rgba(166, 111, 107, 0.20) 48%, transparent 48%);
+  font-weight: 900;
+}
+
+.lit-layout .lit-mini-note,
+.lit-layout .lit-two-col > div,
+.lit-layout .reference-item,
+.lit-layout .lit-callout,
+.lit-layout .lit-card:hover .lit-mini-note,
+.lit-layout .lit-card:hover .lit-two-col > div,
+.lit-layout .lit-card:hover .reference-item,
+.lit-layout .lit-card:hover .lit-callout {
+  border: 1px solid var(--fine-line);
+  background: rgba(255, 250, 241, 0.70);
+  color: var(--body-text);
+}
+
+.lit-layout .lit-mini-note strong,
+.lit-layout .lit-two-col strong,
+.lit-layout .reference-item strong,
+.lit-layout .lit-card:hover .lit-mini-note strong,
+.lit-layout .lit-card:hover .lit-two-col strong,
+.lit-layout .lit-card:hover .reference-item strong {
+  color: var(--dark-text);
+}
+
+.lit-layout .lit-mini-note span,
+.lit-layout .reference-item span,
+.lit-layout .lit-card:hover .lit-mini-note span,
+.lit-layout .lit-card:hover .reference-item span {
+  color: var(--muted-text);
+}
+
+.lit-layout .lit-callout,
+.lit-layout .lit-card:hover .lit-callout {
+  color: var(--body-text);
+}
+
+.lit-layout .lit-callout.strong,
+.lit-layout .lit-card:hover .lit-callout.strong {
+  color: var(--dark-text);
+  background: rgba(111, 143, 163, 0.13);
+}
+/* ================= END FINDINGS LIGHT CARD SPECIFICITY FIX ================= */
+
+/* ================= RESTORE HERO BACKGROUND IMAGE ================= */
+/*
+  Keep the original cover image layer from index.html:
+  <div class="slide active" style="background-image: url('charlesdeluvio-Lks7vei-eAg-unsplash.jpg')"></div>
+
+  The previous light-theme override hid .visual-slides and .slide.
+  This block restores the image while keeping the new light Morandi theme.
+*/
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 241, 0.78), rgba(246, 239, 227, 0.92));
+}
+
+.visual-slides {
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.slide {
+  display: block;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.04);
+  filter: saturate(0.82) contrast(0.92) brightness(1.12);
+  transition:
+    opacity 1.2s cubic-bezier(.4,0,.2,1),
+    transform 7s ease-out;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Replace the old dark overlays with light warm overlays,
+   so dark text remains readable and the image is still visible. */
+.hero-overlay-top,
+.hero-overlay-bottom {
+  display: block;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-overlay-top {
+  z-index: 2;
+  background:
+    radial-gradient(circle at 14% 20%, rgba(166, 111, 107, 0.22), transparent 28rem),
+    radial-gradient(circle at 86% 18%, rgba(111, 143, 163, 0.20), transparent 32rem),
+    linear-gradient(180deg, rgba(255, 250, 241, 0.88), rgba(255, 250, 241, 0.50) 48%, rgba(246, 239, 227, 0.70));
+}
+
+.hero-overlay-bottom {
+  z-index: 3;
+  background:
+    linear-gradient(90deg, rgba(255, 250, 241, 0.94) 0%, rgba(255, 250, 241, 0.78) 42%, rgba(255, 250, 241, 0.28) 100%),
+    linear-gradient(0deg, rgba(246, 239, 227, 0.96), rgba(246, 239, 227, 0.56) 42%, transparent 72%);
+}
+
+.hero-noise {
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+/* Keep progress bar hidden in the light version; it is not needed for a single image. */
+.slide-progress-wrap,
+.slide-progress-bar {
+  display: none;
+}
+
+/* Keep hero text above the restored image layers. */
+.hero-copy {
+  position: relative;
+  z-index: 10;
+}
+/* ================= END RESTORE HERO BACKGROUND IMAGE ================= */
