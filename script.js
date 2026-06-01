@@ -784,16 +784,17 @@ function renderBSankey(data) {
     (d) => getBStage(d.name)
   ).map((d) => d[1]);
 
-svg.append("g")
-  .selectAll("text")
-  .data(stageData)
-  .join("text")
-  .attr("class", "b-stage-label")
-  .attr("x", (d) => d.x)
-  .attr("y", 34)
-  .attr("text-anchor", "middle")
-  .attr("fill", (d) => bStageColors[d.stage] || colors.ink)
-  .text((d) => d.label);
+  svg.append("g")
+    .selectAll("text")
+    .data(stageData)
+    .join("text")
+    .attr("class", "b-stage-label")
+    .attr("x", (d) => d.x)
+    .attr("y", 34)
+    .attr("text-anchor", "middle")
+    .attr("fill", (d) => bStageColors[d.stage] || colors.ink)
+    .text((d) => d.label);
+}
 
 function wrapBText(text, width) {
   text.each(function () {
