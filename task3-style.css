@@ -570,8 +570,8 @@ h2 {
 }
 
 .r-row-bg {
-  fill: #15181d;
-  stroke: rgba(255,255,255,.055);
+  fill: rgba(255, 250, 241, 0.78) !important;
+  stroke: rgba(99, 82, 69, 0.16) !important;
 }
 
 .r-discipline-label,
