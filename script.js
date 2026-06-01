@@ -784,17 +784,38 @@ function renderBSankey(data) {
     (d) => getBStage(d.name)
   ).map((d) => d[1]);
 
-  svg.append("g")
-    .selectAll("text")
-    .data(stageData)
-    .join("text")
-    .attr("class", "b-stage-label")
-    .attr("x", (d) => d.x)
-    .attr("y", 34)
-    .attr("text-anchor", "middle")
-    .attr("fill", (d) => bStageColors[d.stage] || colors.ink)
-    .text((d) => d.label);
-}
+const bStageLabelLines = {
+  "Submission": ["Submission"],
+  "Peer Review Type": ["Review", "Type"],
+  "Desk Screening": ["Initial", "Check"],
+  "Reviewer Count": ["Reviewers"],
+  "Review Score": ["Review", "Score"],
+  "Review Rounds": ["Revision", "Rounds"],
+  "Editorial Recommendation": ["Editor", "Rec."],
+  "Final Decision": ["Final", "Decision"]
+};
+
+svg.append("g")
+  .selectAll("text")
+  .data(stageData)
+  .join("text")
+  .attr("class", "b-stage-label")
+  .attr("x", (d) => d.x)
+  .attr("y", 24)
+  .attr("text-anchor", "middle")
+  .attr("fill", "rgba(36, 32, 29, 0.82)")
+  .each(function (d) {
+    const lines = bStageLabelLines[d.stage] || [d.label];
+    const text = d3.select(this);
+
+    text.selectAll("tspan")
+      .data(lines)
+      .join("tspan")
+      .attr("x", d.x)
+      .attr("dy", (_, i) => (i === 0 ? 0 : "1.12em"))
+      .text((line) => line);
+  });
+
 
 function wrapBText(text, width) {
   text.each(function () {
