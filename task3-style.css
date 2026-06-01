@@ -1927,5 +1927,45 @@ input {
   stroke-linejoin: round !important;
   paint-order: stroke !important;
 }
+/* ===== Reviewer recommendation text color only ===== */
+
+/* 左侧行标题：Biomedicine & health / Life sciences 等 */
+#review-recommendation #recommendation-chart .r-discipline-label {
+  fill: #24201d !important;
+  stroke: none !important;
+  paint-order: normal !important;
+}
+
+/* 左侧小字：Accept + minor revision */
+#review-recommendation #recommendation-chart .r-group-meta {
+  fill: rgba(36, 32, 29, 0.55) !important;
+  stroke: none !important;
+  paint-order: normal !important;
+}
+
+/* 顶部列名：Solo man / Solo woman / Men team 等 */
+#review-recommendation #recommendation-chart .rec-column-labels text {
+  fill: rgba(36, 32, 29, 0.70) !important;
+  stroke: none !important;
+  paint-order: normal !important;
+}
+
+/* 格子里的百分比：在深色/绿色热力格上，保持浅色 */
+#review-recommendation #recommendation-chart .rec-heat-value {
+  fill: #fffaf1 !important;
+  stroke: rgba(20, 23, 29, 0.45) !important;
+  stroke-width: 4px !important;
+  stroke-linejoin: round !important;
+  paint-order: stroke !important;
+}
+
+/* 格子里的 n=xxx：也保持浅色 */
+#review-recommendation #recommendation-chart .rec-heat-sub {
+  fill: rgba(255, 250, 241, 0.78) !important;
+  stroke: rgba(20, 23, 29, 0.28) !important;
+  stroke-width: 2px !important;
+  stroke-linejoin: round !important;
+  paint-order: stroke !important;
+}
 
 /* ================= END RESTORE HERO BACKGROUND IMAGE ================= */
