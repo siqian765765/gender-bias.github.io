@@ -1969,7 +1969,7 @@ input {
 }
 
 #b-sankey-chart svg text.b-stage-label {
-  font-size: 10px !important;
+  font-size: 13px !important;
   font-weight: 900 !important;
   letter-spacing: 0.02em !important;
   fill: rgba(36, 32, 29, 0.82) !important;
