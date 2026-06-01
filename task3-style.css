@@ -1967,12 +1967,6 @@ input {
   stroke-linejoin: round !important;
   paint-order: stroke !important;
 }
-/* Sankey top stage labels: Submission / Review Type / Initial Check */
-#b-sankey-chart svg text.b-stage-label {
-  font-size: 11px !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.02em !important;
-  fill: rgba(36, 32, 29, 0.82) !important;
-}
+
 
 /* ================= END RESTORE HERO BACKGROUND IMAGE ================= */
