@@ -1,0 +1,223 @@
+{
+  "records": [
+    {
+      "area": "Biomedicine &\r\nhealth sciences",
+      "author_group": "All men team",
+      "author_group_label": "All-Men Team",
+      "group_order": 2,
+      "manuscripts": 27492,
+      "accepted": 10036,
+      "acceptance_rate": 0.36505165138949514
+    },
+    {
+      "area": "Biomedicine &\r\nhealth sciences",
+      "author_group": "All women team",
+      "author_group_label": "All-Women Team",
+      "group_order": 3,
+      "manuscripts": 4301,
+      "accepted": 1792,
+      "acceptance_rate": 0.41664729132759826
+    },
+    {
+      "area": "Biomedicine &\r\nhealth sciences",
+      "author_group": "Cross collaboration",
+      "author_group_label": "Mixed-Gender Team",
+      "group_order": 4,
+      "manuscripts": 77135,
+      "accepted": 33104,
+      "acceptance_rate": 0.429169637648279
+    },
+    {
+      "area": "Biomedicine &\r\nhealth sciences",
+      "author_group": "Solo man",
+      "author_group_label": "Solo Man",
+      "group_order": 0,
+      "manuscripts": 2995,
+      "accepted": 1208,
+      "acceptance_rate": 0.403338898163606
+    },
+    {
+      "area": "Biomedicine &\r\nhealth sciences",
+      "author_group": "Solo woman",
+      "author_group_label": "Solo Woman",
+      "group_order": 1,
+      "manuscripts": 1498,
+      "accepted": 592,
+      "acceptance_rate": 0.3951935914552737
+    },
+    {
+      "area": "Life sciences",
+      "author_group": "All men team",
+      "author_group_label": "All-Men Team",
+      "group_order": 2,
+      "manuscripts": 8824,
+      "accepted": 4519,
+      "acceptance_rate": 0.5121260199456029
+    },
+    {
+      "area": "Life sciences",
+      "author_group": "All women team",
+      "author_group_label": "All-Women Team",
+      "group_order": 3,
+      "manuscripts": 652,
+      "accepted": 322,
+      "acceptance_rate": 0.4938650306748466
+    },
+    {
+      "area": "Life sciences",
+      "author_group": "Cross collaboration",
+      "author_group_label": "Mixed-Gender Team",
+      "group_order": 4,
+      "manuscripts": 20075,
+      "accepted": 10564,
+      "acceptance_rate": 0.5262266500622665
+    },
+    {
+      "area": "Life sciences",
+      "author_group": "Solo man",
+      "author_group_label": "Solo Man",
+      "group_order": 0,
+      "manuscripts": 1448,
+      "accepted": 701,
+      "acceptance_rate": 0.48411602209944754
+    },
+    {
+      "area": "Life sciences",
+      "author_group": "Solo woman",
+      "author_group_label": "Solo Woman",
+      "group_order": 1,
+      "manuscripts": 332,
+      "accepted": 156,
+      "acceptance_rate": 0.46987951807228917
+    },
+    {
+      "area": "Physical sciences",
+      "author_group": "All men team",
+      "author_group_label": "All-Men Team",
+      "group_order": 2,
+      "manuscripts": 82154,
+      "accepted": 41466,
+      "acceptance_rate": 0.5047350098595321
+    },
+    {
+      "area": "Physical sciences",
+      "author_group": "All women team",
+      "author_group_label": "All-Women Team",
+      "group_order": 3,
+      "manuscripts": 2618,
+      "accepted": 1252,
+      "acceptance_rate": 0.4782276546982429
+    },
+    {
+      "area": "Physical sciences",
+      "author_group": "Cross collaboration",
+      "author_group_label": "Mixed-Gender Team",
+      "group_order": 4,
+      "manuscripts": 87239,
+      "accepted": 47308,
+      "acceptance_rate": 0.5422804021137335
+    },
+    {
+      "area": "Physical sciences",
+      "author_group": "Solo man",
+      "author_group_label": "Solo Man",
+      "group_order": 0,
+      "manuscripts": 10670,
+      "accepted": 4328,
+      "acceptance_rate": 0.4056232427366448
+    },
+    {
+      "area": "Physical sciences",
+      "author_group": "Solo woman",
+      "author_group_label": "Solo Woman",
+      "group_order": 1,
+      "manuscripts": 1634,
+      "accepted": 602,
+      "acceptance_rate": 0.3684210526315789
+    },
+    {
+      "area": "Soc. sciences\r\n& humanities",
+      "author_group": "All men team",
+      "author_group_label": "All-Men Team",
+      "group_order": 2,
+      "manuscripts": 4686,
+      "accepted": 1575,
+      "acceptance_rate": 0.3361075544174136
+    },
+    {
+      "area": "Soc. sciences\r\n& humanities",
+      "author_group": "All women team",
+      "author_group_label": "All-Women Team",
+      "group_order": 3,
+      "manuscripts": 1658,
+      "accepted": 688,
+      "acceptance_rate": 0.4149577804583836
+    },
+    {
+      "area": "Soc. sciences\r\n& humanities",
+      "author_group": "Cross collaboration",
+      "author_group_label": "Mixed-Gender Team",
+      "group_order": 4,
+      "manuscripts": 9000,
+      "accepted": 3581,
+      "acceptance_rate": 0.3978888888888889
+    },
+    {
+      "area": "Soc. sciences\r\n& humanities",
+      "author_group": "Solo man",
+      "author_group_label": "Solo Man",
+      "group_order": 0,
+      "manuscripts": 2407,
+      "accepted": 821,
+      "acceptance_rate": 0.341088491898629
+    },
+    {
+      "area": "Soc. sciences\r\n& humanities",
+      "author_group": "Solo woman",
+      "author_group_label": "Solo Woman",
+      "group_order": 1,
+      "manuscripts": 1300,
+      "accepted": 516,
+      "acceptance_rate": 0.39692307692307693
+    }
+  ],
+  "areas": [
+    "Biomedicine &\r\nhealth sciences",
+    "Life sciences",
+    "Physical sciences",
+    "Soc. sciences\r\n& humanities"
+  ],
+  "author_groups": [
+    {
+      "author_group": "Solo man",
+      "author_group_label": "Solo Man",
+      "group_order": 0
+    },
+    {
+      "author_group": "Solo woman",
+      "author_group_label": "Solo Woman",
+      "group_order": 1
+    },
+    {
+      "author_group": "All men team",
+      "author_group_label": "All-Men Team",
+      "group_order": 2
+    },
+    {
+      "author_group": "All women team",
+      "author_group_label": "All-Women Team",
+      "group_order": 3
+    },
+    {
+      "author_group": "Cross collaboration",
+      "author_group_label": "Mixed-Gender Team",
+      "group_order": 4
+    }
+  ],
+  "meta": {
+    "input_file": "data\\AllPapers.csv",
+    "n_manuscripts_total": 348118,
+    "n_manuscripts_used": 348118,
+    "description": "Acceptance rates by author gender group within each scientific discipline. Acceptance is calculated from FinalAccept."
+  }
+}

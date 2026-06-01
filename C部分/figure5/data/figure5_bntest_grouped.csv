@@ -1,0 +1,89 @@
+﻿score_group,author_group,discipline,mean_predicted_acceptance,n
+0.0,all men,Biomedicine & health sciences,0.0,2827
+0.0,all men,Life sciences,0.0,476
+0.0,all men,Physical sciences,0.0,3199
+0.0,all men,Social sciences & humanities,0.0,544
+0.0,all women,Biomedicine & health sciences,0.0,2827
+0.0,all women,Life sciences,0.0,476
+0.0,all women,Physical sciences,0.0,3199
+0.0,all women,Social sciences & humanities,0.0,544
+0.1,all men,Biomedicine & health sciences,0.0,3056
+0.1,all men,Life sciences,0.0,778
+0.1,all men,Physical sciences,0.0002508780732563974,3986
+0.1,all men,Social sciences & humanities,0.0,918
+0.1,all women,Biomedicine & health sciences,0.0,3056
+0.1,all women,Life sciences,0.0,778
+0.1,all women,Physical sciences,0.0002508780732563974,3986
+0.1,all women,Social sciences & humanities,0.0,918
+0.2,all men,Biomedicine & health sciences,0.049069373942470386,1773
+0.2,all men,Life sciences,0.06313645621181263,491
+0.2,all men,Physical sciences,0.13130929791271348,2635
+0.2,all men,Social sciences & humanities,0.06698564593301436,418
+0.2,all women,Biomedicine & health sciences,0.049069373942470386,1773
+0.2,all women,Life sciences,0.06313645621181263,491
+0.2,all women,Physical sciences,0.13130929791271348,2635
+0.2,all women,Social sciences & humanities,0.06698564593301436,418
+0.3,all men,Biomedicine & health sciences,0.6859279401767505,2942
+0.3,all men,Life sciences,0.9974554707379135,786
+0.3,all men,Physical sciences,0.9946254618743702,2977
+0.3,all men,Social sciences & humanities,0.9924050632911392,395
+0.3,all women,Biomedicine & health sciences,0.6859279401767505,2942
+0.3,all women,Life sciences,0.9974554707379135,786
+0.3,all women,Physical sciences,0.9946254618743702,2977
+0.3,all women,Social sciences & humanities,0.9924050632911392,395
+0.4,all men,Biomedicine & health sciences,0.8854700854700854,585
+0.4,all men,Life sciences,1.0,225
+0.4,all men,Physical sciences,1.0,1028
+0.4,all men,Social sciences & humanities,1.0,209
+0.4,all women,Biomedicine & health sciences,0.8854700854700854,585
+0.4,all women,Life sciences,1.0,225
+0.4,all women,Physical sciences,1.0,1028
+0.4,all women,Social sciences & humanities,1.0,209
+0.5,all men,Biomedicine & health sciences,1.0,1928
+0.5,all men,Life sciences,1.0,736
+0.5,all men,Physical sciences,1.0,3082
+0.5,all men,Social sciences & humanities,1.0,286
+0.5,all women,Biomedicine & health sciences,1.0,1928
+0.5,all women,Life sciences,1.0,736
+0.5,all women,Physical sciences,1.0,3082
+0.5,all women,Social sciences & humanities,1.0,286
+0.6,all men,Biomedicine & health sciences,1.0,486
+0.6,all men,Life sciences,1.0,202
+0.6,all men,Physical sciences,1.0,786
+0.6,all men,Social sciences & humanities,1.0,97
+0.6,all women,Biomedicine & health sciences,1.0,486
+0.6,all women,Life sciences,1.0,202
+0.6,all women,Physical sciences,1.0,786
+0.6,all women,Social sciences & humanities,1.0,97
+0.7,all men,Biomedicine & health sciences,1.0,2330
+0.7,all men,Life sciences,1.0,768
+0.7,all men,Physical sciences,1.0,3594
+0.7,all men,Social sciences & humanities,1.0,236
+0.7,all women,Biomedicine & health sciences,1.0,2330
+0.7,all women,Life sciences,1.0,768
+0.7,all women,Physical sciences,1.0,3594
+0.7,all women,Social sciences & humanities,1.0,236
+0.8,all men,Biomedicine & health sciences,1.0,188
+0.8,all men,Life sciences,1.0,56
+0.8,all men,Physical sciences,1.0,253
+0.8,all men,Social sciences & humanities,1.0,13
+0.8,all women,Biomedicine & health sciences,1.0,188
+0.8,all women,Life sciences,1.0,56
+0.8,all women,Physical sciences,1.0,253
+0.8,all women,Social sciences & humanities,1.0,13
+0.9,all men,Biomedicine & health sciences,1.0,629
+0.9,all men,Life sciences,1.0,165
+0.9,all men,Physical sciences,1.0,856
+0.9,all men,Social sciences & humanities,1.0,40
+0.9,all women,Biomedicine & health sciences,1.0,629
+0.9,all women,Life sciences,1.0,165
+0.9,all women,Physical sciences,1.0,856
+0.9,all women,Social sciences & humanities,1.0,40
+1.0,all men,Biomedicine & health sciences,1.0,506
+1.0,all men,Life sciences,1.0,67
+1.0,all men,Physical sciences,1.0,331
+1.0,all men,Social sciences & humanities,1.0,26
+1.0,all women,Biomedicine & health sciences,1.0,506
+1.0,all women,Life sciences,1.0,67
+1.0,all women,Physical sciences,1.0,331
+1.0,all women,Social sciences & humanities,1.0,26

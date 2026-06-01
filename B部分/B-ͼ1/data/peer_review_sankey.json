@@ -1,0 +1,273 @@
+{
+  "nodes": [
+    {
+      "name": "Desk Screening: Desk Rejected"
+    },
+    {
+      "name": "Desk Screening: Sent to Review"
+    },
+    {
+      "name": "Editorial Recommendation: Accept"
+    },
+    {
+      "name": "Editorial Recommendation: Major Revision"
+    },
+    {
+      "name": "Editorial Recommendation: Minor Revision"
+    },
+    {
+      "name": "Final Decision: Accepted"
+    },
+    {
+      "name": "Final Decision: Rejected"
+    },
+    {
+      "name": "Peer Review Type: Double Blind"
+    },
+    {
+      "name": "Peer Review Type: Single Blind"
+    },
+    {
+      "name": "Review Rounds: 1 Round"
+    },
+    {
+      "name": "Review Rounds: 2 Rounds"
+    },
+    {
+      "name": "Review Rounds: 3+ Rounds"
+    },
+    {
+      "name": "Review Rounds: No Revision"
+    },
+    {
+      "name": "Review Score: Low Score"
+    },
+    {
+      "name": "Review Score: No Score"
+    },
+    {
+      "name": "Reviewer Count: 1 Reviewer"
+    },
+    {
+      "name": "Reviewer Count: 2 Reviewers"
+    },
+    {
+      "name": "Reviewer Count: 3+ Reviewers"
+    },
+    {
+      "name": "Submission: Submitted"
+    }
+  ],
+  "links": [
+    {
+      "source": 0,
+      "target": 5,
+      "value": 148411
+    },
+    {
+      "source": 0,
+      "target": 6,
+      "value": 82
+    },
+    {
+      "source": 1,
+      "target": 15,
+      "value": 32498
+    },
+    {
+      "source": 1,
+      "target": 16,
+      "value": 116243
+    },
+    {
+      "source": 1,
+      "target": 17,
+      "value": 50884
+    },
+    {
+      "source": 2,
+      "target": 5,
+      "value": 67
+    },
+    {
+      "source": 2,
+      "target": 6,
+      "value": 6476
+    },
+    {
+      "source": 3,
+      "target": 5,
+      "value": 33766
+    },
+    {
+      "source": 3,
+      "target": 6,
+      "value": 122750
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "value": 743
+    },
+    {
+      "source": 4,
+      "target": 6,
+      "value": 35823
+    },
+    {
+      "source": 7,
+      "target": 0,
+      "value": 24095
+    },
+    {
+      "source": 7,
+      "target": 1,
+      "value": 32133
+    },
+    {
+      "source": 8,
+      "target": 0,
+      "value": 124398
+    },
+    {
+      "source": 8,
+      "target": 1,
+      "value": 167492
+    },
+    {
+      "source": 9,
+      "target": 2,
+      "value": 1486
+    },
+    {
+      "source": 9,
+      "target": 3,
+      "value": 80133
+    },
+    {
+      "source": 9,
+      "target": 4,
+      "value": 29627
+    },
+    {
+      "source": 10,
+      "target": 2,
+      "value": 483
+    },
+    {
+      "source": 10,
+      "target": 3,
+      "value": 44060
+    },
+    {
+      "source": 10,
+      "target": 4,
+      "value": 5167
+    },
+    {
+      "source": 11,
+      "target": 2,
+      "value": 121
+    },
+    {
+      "source": 11,
+      "target": 3,
+      "value": 12459
+    },
+    {
+      "source": 11,
+      "target": 4,
+      "value": 998
+    },
+    {
+      "source": 12,
+      "target": 2,
+      "value": 4453
+    },
+    {
+      "source": 12,
+      "target": 3,
+      "value": 19864
+    },
+    {
+      "source": 12,
+      "target": 4,
+      "value": 774
+    },
+    {
+      "source": 13,
+      "target": 9,
+      "value": 111236
+    },
+    {
+      "source": 13,
+      "target": 10,
+      "value": 49705
+    },
+    {
+      "source": 13,
+      "target": 11,
+      "value": 13576
+    },
+    {
+      "source": 13,
+      "target": 12,
+      "value": 25085
+    },
+    {
+      "source": 14,
+      "target": 9,
+      "value": 10
+    },
+    {
+      "source": 14,
+      "target": 10,
+      "value": 5
+    },
+    {
+      "source": 14,
+      "target": 11,
+      "value": 2
+    },
+    {
+      "source": 14,
+      "target": 12,
+      "value": 6
+    },
+    {
+      "source": 15,
+      "target": 13,
+      "value": 32498
+    },
+    {
+      "source": 16,
+      "target": 13,
+      "value": 116243
+    },
+    {
+      "source": 17,
+      "target": 13,
+      "value": 50861
+    },
+    {
+      "source": 17,
+      "target": 14,
+      "value": 23
+    },
+    {
+      "source": 18,
+      "target": 7,
+      "value": 56228
+    },
+    {
+      "source": 18,
+      "target": 8,
+      "value": 291890
+    }
+  ],
+  "meta": {
+    "input_file": "data\\AllPapers.csv",
+    "n_manuscripts": 348118,
+    "description": "Peer review is represented as a multi-stage process, not as a single outcome."
+  }
+}

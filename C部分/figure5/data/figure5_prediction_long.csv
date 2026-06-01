@@ -1,0 +1,89 @@
+﻿review_score,author_group,discipline,probability_final_acceptance
+0.0,all men,Biomedicine & health sciences,0.0
+0.0,all men,Life sciences,0.0
+0.0,all men,Physical sciences,0.0
+0.0,all men,Social sciences & humanities,0.0
+0.1,all men,Biomedicine & health sciences,0.13755148662213146
+0.1,all men,Life sciences,0.17314736545505777
+0.1,all men,Physical sciences,0.1610186578159654
+0.1,all men,Social sciences & humanities,0.1563932755985736
+0.2,all men,Biomedicine & health sciences,0.21444281524926687
+0.2,all men,Life sciences,0.26125874125874127
+0.2,all men,Physical sciences,0.25504662249604565
+0.2,all men,Social sciences & humanities,0.25112751127511274
+0.30000000000000004,all men,Biomedicine & health sciences,0.30243923820377394
+0.30000000000000004,all men,Life sciences,0.3704250087811732
+0.30000000000000004,all men,Physical sciences,0.36920403758139203
+0.30000000000000004,all men,Social sciences & humanities,0.3639824861983628
+0.4,all men,Biomedicine & health sciences,0.40669947409550766
+0.4,all men,Life sciences,0.4862298195631529
+0.4,all men,Physical sciences,0.5054945054945055
+0.4,all men,Social sciences & humanities,0.49152153987167735
+0.5,all men,Biomedicine & health sciences,0.5128419488179834
+0.5,all men,Life sciences,0.6056411938340439
+0.5,all men,Physical sciences,0.6337472085752568
+0.5,all men,Social sciences & humanities,0.6298921417565485
+0.6000000000000001,all men,Biomedicine & health sciences,0.6246560264171711
+0.6000000000000001,all men,Life sciences,0.7148912787502943
+0.6000000000000001,all men,Physical sciences,0.7513356838484999
+0.6000000000000001,all men,Social sciences & humanities,0.7596048298572997
+0.7000000000000001,all men,Biomedicine & health sciences,0.7198363179645085
+0.7000000000000001,all men,Life sciences,0.8044991965720407
+0.7000000000000001,all men,Physical sciences,0.8445116902277825
+0.7000000000000001,all men,Social sciences & humanities,0.8438775510204082
+0.8,all men,Biomedicine & health sciences,0.8120843989769821
+0.8,all men,Life sciences,0.873565187596368
+0.8,all men,Physical sciences,0.9117761179551848
+0.8,all men,Social sciences & humanities,0.9153846153846154
+0.9,all men,Biomedicine & health sciences,0.8755565971408483
+0.9,all men,Life sciences,0.936590100291168
+0.9,all men,Physical sciences,0.9510805242624819
+0.9,all men,Social sciences & humanities,0.9424460431654677
+1.0,all men,Biomedicine & health sciences,0.9333648393194707
+1.0,all men,Life sciences,0.956081081081081
+1.0,all men,Physical sciences,0.9787156630889576
+1.0,all men,Social sciences & humanities,1.0
+0.0,all women,Biomedicine & health sciences,0.0
+0.0,all women,Life sciences,0.0
+0.0,all women,Physical sciences,0.0
+0.0,all women,Social sciences & humanities,0.0
+0.1,all women,Biomedicine & health sciences,0.17588564325668116
+0.1,all women,Life sciences,0.19433198380566802
+0.1,all women,Physical sciences,0.1906474820143885
+0.1,all women,Social sciences & humanities,0.16381909547738693
+0.2,all women,Biomedicine & health sciences,0.25366787157133747
+0.2,all women,Life sciences,0.2455621301775148
+0.2,all women,Physical sciences,0.2792642140468227
+0.2,all women,Social sciences & humanities,0.23670306445931666
+0.30000000000000004,all women,Biomedicine & health sciences,0.34752145734804696
+0.30000000000000004,all women,Life sciences,0.3820093457943925
+0.30000000000000004,all women,Physical sciences,0.3898768809849521
+0.30000000000000004,all women,Social sciences & humanities,0.36730486008836527
+0.4,all women,Biomedicine & health sciences,0.44697704494018753
+0.4,all women,Life sciences,0.4769392033542977
+0.4,all women,Physical sciences,0.5226286422814631
+0.4,all women,Social sciences & humanities,0.48508124076809456
+0.5,all women,Biomedicine & health sciences,0.5634648370497427
+0.5,all women,Life sciences,0.6442199775533108
+0.5,all women,Physical sciences,0.6538987688098495
+0.5,all women,Social sciences & humanities,0.6317590691307323
+0.6000000000000001,all women,Biomedicine & health sciences,0.6632401315789473
+0.6000000000000001,all women,Life sciences,0.6774193548387096
+0.6000000000000001,all women,Physical sciences,0.7623762376237624
+0.6000000000000001,all women,Social sciences & humanities,0.7402873869079297
+0.7000000000000001,all women,Biomedicine & health sciences,0.7639160839160839
+0.7000000000000001,all women,Life sciences,0.8128654970760234
+0.7000000000000001,all women,Physical sciences,0.8730853391684902
+0.7000000000000001,all women,Social sciences & humanities,0.8539224526600541
+0.8,all women,Biomedicine & health sciences,0.853927813163482
+0.8,all women,Life sciences,0.875
+0.8,all women,Physical sciences,0.9197080291970803
+0.8,all women,Social sciences & humanities,0.8841121495327103
+0.9,all women,Biomedicine & health sciences,0.8955916473317865
+0.9,all women,Life sciences,0.9425287356321839
+0.9,all women,Physical sciences,0.9584664536741214
+0.9,all women,Social sciences & humanities,0.9507389162561576
+1.0,all women,Biomedicine & health sciences,0.9579579579579579
+1.0,all women,Life sciences,0.9397590361445783
+1.0,all women,Physical sciences,0.9821428571428571
+1.0,all women,Social sciences & humanities,1.0

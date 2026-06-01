@@ -1,0 +1,81 @@
+area,author_group,recommendation,count,total,share
+Biomedicine & health sciences,Solo man,Accept,206,1613,0.12771234
+Biomedicine & health sciences,Solo man,Minor revisions,425,1613,0.26348419
+Biomedicine & health sciences,Solo man,Major revisions,982,1613,0.60880347
+Biomedicine & health sciences,Solo man,Reject Major,0,1613,0.00000000
+Biomedicine & health sciences,Solo woman,Accept,66,846,0.07801418
+Biomedicine & health sciences,Solo woman,Minor revisions,184,846,0.21749409
+Biomedicine & health sciences,Solo woman,Major revisions,596,846,0.70449173
+Biomedicine & health sciences,Solo woman,Reject Major,0,846,0.00000000
+Biomedicine & health sciences,All men team,Accept,1090,13820,0.07887120
+Biomedicine & health sciences,All men team,Minor revisions,2857,13820,0.20672938
+Biomedicine & health sciences,All men team,Major revisions,9873,13820,0.71439942
+Biomedicine & health sciences,All men team,Reject Major,0,13820,0.00000000
+Biomedicine & health sciences,All women team,Accept,148,2525,0.05861386
+Biomedicine & health sciences,All women team,Minor revisions,470,2525,0.18613861
+Biomedicine & health sciences,All women team,Major revisions,1907,2525,0.75524752
+Biomedicine & health sciences,All women team,Reject Major,0,2525,0.00000000
+Biomedicine & health sciences,Cross collaboration,Accept,2802,42674,0.06566059
+Biomedicine & health sciences,Cross collaboration,Minor revisions,7591,42674,0.17788349
+Biomedicine & health sciences,Cross collaboration,Major revisions,32281,42674,0.75645592
+Biomedicine & health sciences,Cross collaboration,Reject Major,0,42674,0.00000000
+Life sciences,Solo man,Accept,22,908,0.02422907
+Life sciences,Solo man,Minor revisions,316,908,0.34801762
+Life sciences,Solo man,Major revisions,570,908,0.62775330
+Life sciences,Solo man,Reject Major,0,908,0.00000000
+Life sciences,Solo woman,Accept,5,202,0.02475248
+Life sciences,Solo woman,Minor revisions,66,202,0.32673267
+Life sciences,Solo woman,Major revisions,131,202,0.64851485
+Life sciences,Solo woman,Reject Major,0,202,0.00000000
+Life sciences,All men team,Accept,66,5725,0.01152838
+Life sciences,All men team,Minor revisions,1507,5725,0.26323144
+Life sciences,All men team,Major revisions,4152,5725,0.72524017
+Life sciences,All men team,Reject Major,0,5725,0.00000000
+Life sciences,All women team,Accept,7,402,0.01741294
+Life sciences,All women team,Minor revisions,120,402,0.29850746
+Life sciences,All women team,Major revisions,275,402,0.68407960
+Life sciences,All women team,Reject Major,0,402,0.00000000
+Life sciences,Cross collaboration,Accept,184,13055,0.01409422
+Life sciences,Cross collaboration,Minor revisions,3414,13055,0.26150900
+Life sciences,Cross collaboration,Major revisions,9457,13055,0.72439678
+Life sciences,Cross collaboration,Reject Major,0,13055,0.00000000
+Physical sciences,Solo man,Accept,186,5417,0.03433635
+Physical sciences,Solo man,Minor revisions,1087,5417,0.20066457
+Physical sciences,Solo man,Major revisions,4144,5417,0.76499908
+Physical sciences,Solo man,Reject Major,0,5417,0.00000000
+Physical sciences,Solo woman,Accept,23,778,0.02956298
+Physical sciences,Solo woman,Minor revisions,139,778,0.17866324
+Physical sciences,Solo woman,Major revisions,616,778,0.79177378
+Physical sciences,Solo woman,Reject Major,0,778,0.00000000
+Physical sciences,All men team,Accept,880,48502,0.01814358
+Physical sciences,All men team,Minor revisions,7994,48502,0.16481795
+Physical sciences,All men team,Major revisions,39628,48502,0.81703847
+Physical sciences,All men team,Reject Major,0,48502,0.00000000
+Physical sciences,All women team,Accept,15,1399,0.01072194
+Physical sciences,All women team,Minor revisions,193,1399,0.13795568
+Physical sciences,All women team,Major revisions,1191,1399,0.85132237
+Physical sciences,All women team,Reject Major,0,1399,0.00000000
+Physical sciences,Cross collaboration,Accept,707,52269,0.01352618
+Physical sciences,Cross collaboration,Minor revisions,9438,52269,0.18056592
+Physical sciences,Cross collaboration,Major revisions,42124,52269,0.80590790
+Physical sciences,Cross collaboration,Reject Major,0,52269,0.00000000
+Social sciences & humanities,Solo man,Accept,40,1073,0.03727866
+Social sciences & humanities,Solo man,Minor revisions,137,1073,0.12767940
+Social sciences & humanities,Solo man,Major revisions,896,1073,0.83504194
+Social sciences & humanities,Solo man,Reject Major,0,1073,0.00000000
+Social sciences & humanities,Solo woman,Accept,12,663,0.01809955
+Social sciences & humanities,Solo woman,Minor revisions,64,663,0.09653092
+Social sciences & humanities,Solo woman,Major revisions,587,663,0.88536953
+Social sciences & humanities,Solo woman,Reject Major,0,663,0.00000000
+Social sciences & humanities,All men team,Accept,24,2038,0.01177625
+Social sciences & humanities,All men team,Minor revisions,128,2038,0.06280667
+Social sciences & humanities,All men team,Major revisions,1886,2038,0.92541708
+Social sciences & humanities,All men team,Reject Major,0,2038,0.00000000
+Social sciences & humanities,All women team,Accept,9,933,0.00964630
+Social sciences & humanities,All women team,Minor revisions,101,933,0.10825295
+Social sciences & humanities,All women team,Major revisions,823,933,0.88210075
+Social sciences & humanities,All women team,Reject Major,0,933,0.00000000
+Social sciences & humanities,Cross collaboration,Accept,51,4783,0.01066276
+Social sciences & humanities,Cross collaboration,Minor revisions,335,4783,0.07003972
+Social sciences & humanities,Cross collaboration,Major revisions,4397,4783,0.91929751
+Social sciences & humanities,Cross collaboration,Reject Major,0,4783,0.00000000
