@@ -102,14 +102,14 @@ const bStageNames = {
 };
 
 const bStageColors = {
-  "Submission": "#3CAC3B",
-  "Peer Review Type": "#6886d9",
-  "Desk Screening": "#2A398D",
-  "Reviewer Count": "#55a7a0",
-  "Review Score": "#e8a020",
-  "Review Rounds": "#d9824b",
-  "Editorial Recommendation": "#c75c5c",
-  "Final Decision": "#E61D25"
+  "Submission": "#C06C9A",
+  "Peer Review Type": "#B8A4D4",
+  "Desk Screening": "#9DBFE1",
+  "Reviewer Count": "#89BFA1",
+  "Review Score": "#C5CF78",
+  "Review Rounds": "#EDBE75",
+  "Editorial Recommendation": "#EDA57E",
+  "Final Decision": "#F28B58"
 };
 
 const bDotColors = {
