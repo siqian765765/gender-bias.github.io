@@ -670,9 +670,9 @@ function renderBSankey(data) {
 
   container.selectAll("*").remove();
 
-  const width = Math.max(container.node().clientWidth, 1180);
+  const width = Math.max(container.node().clientWidth, 1250);
   const height = 720;
-  const margin = { top: 66, right: 150, bottom: 36, left: 154 };
+  const margin = { top: 66, right: 120, bottom: 36, left: 120 };
 
   const svg = container
     .append("svg")
